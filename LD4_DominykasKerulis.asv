@@ -1,0 +1,42 @@
+% Dominykas Kerulis, EF-25/2, 2026-10-02
+close all
+clear all
+clc
+
+%==================
+figure(1);
+theta = linspace(0, 2*pi, 200);
+r = linspace(0, 1, 100);
+[Theta, R] = meshgrid(theta, r);
+
+X = R .* cos(Theta);
+Y = R .* sin(Theta);
+Z = 1 - 2 .* X.^2 - 3 .* Y.^2;
+
+surf(X, Y, Z, 'FaceColor', [0.2 0.6 0.9], 'EdgeColor', 'none');
+shading interp
+xlabel('x')
+ylabel('y')
+zlabel('f(x,y)')
+title('f(x,y) = 1 - 2x^2 - 3y^2')
+view(45, 45)
+grid on
+
+%=================
+figure(2);
+theta = linspace(0, 2*pi, 200);
+r = linspace(0, 1, 100);
+[Theta, R] = meshgrid(theta, r);
+
+
+
+Z = 1 - 2 .* X.^2 - 3 .* Y.^2;
+
+surf(X, Y, Z, 'FaceColor', [0.2 0.6 0.9], 'EdgeColor', 'none');
+shading interp
+xlabel('x')
+ylabel('y')
+zlabel('f(x,y)')
+title('f(x,y) = 1 - 2x^2 - 3y^2')
+view(45, 45)
+grid on
