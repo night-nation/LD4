@@ -40,3 +40,17 @@ view(60, 60)
 grid on
 
 %=================
+figure(3);
+x = linspace(-2, 2, 200);
+y = linspace(-2, 2, 200);
+[X, Y] = meshgrid(x, y);
+Z = 1 - (X.^2 + Y.^2);
+
+surf(X, Y, Z, 'FaceColor', 'b', 'EdgeColor', 'none');
+alpha(0.5);
+xlabel('x')
+ylabel('y')
+zlabel('z(x,y)')
+title('z(x,y) = 1 - (x^2 + y^2)')
+grid on
+
